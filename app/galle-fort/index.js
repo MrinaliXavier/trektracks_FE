@@ -171,12 +171,7 @@ export default function GalleFortDetail() {
             <Text style={styles.bulletText}>Jungle Beach (8 km)</Text>
           </View>
         </View>
-        
-        {/* Add to Itinerary Button */}
-        <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.addButtonText}>Add to Itinerary</Text>
-          <Ionicons name="add-circle-outline" size={20} color="white" style={styles.addIcon} />
-        </TouchableOpacity>
+      
         
         <View style={styles.footer} />
       </ScrollView>

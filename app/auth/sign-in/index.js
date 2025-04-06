@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, ToastAndroid, StatusBar, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, ToastAndroid, StatusBar, ScrollView } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useEffect, useState } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
@@ -62,7 +62,7 @@ export default function SignIn() {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.formContainer}>
+      <ScrollView style={styles.formContainer}>
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>Let's Sign You In</Text>
           <Text style={styles.subtitleText}>Welcome Back</Text>
@@ -128,7 +128,8 @@ export default function SignIn() {
         >
           <Text style={styles.createAccountButtonText}>Create Account</Text>
         </TouchableOpacity>
-      </View>
+        <View style={{height: 40}} />
+      </ScrollView>
     </View>
   )
 }
