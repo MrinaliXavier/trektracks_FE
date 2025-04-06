@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert, ToastAndroid, StatusBar } from 'react-native'
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert, ToastAndroid, StatusBar, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation, useRouter } from 'expo-router'
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -62,7 +62,7 @@ export default function SignUp() {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.formContainer}>
+      <ScrollView style={styles.formContainer}>
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>Create New Account</Text>
           <Text style={styles.subtitleText}>Join our community</Text>
@@ -142,7 +142,8 @@ export default function SignUp() {
             <Text style={styles.signInLinkText}>Sign In</Text>
           </TouchableOpacity>
         </View>
-      </View>
+        <View style={{height: 40}} />
+      </ScrollView>
     </View>
   )
 }
@@ -248,6 +249,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 24,
     alignItems: 'center',
+    marginBottom: 20,
   },
   signInText: {
     fontFamily: 'outfit',

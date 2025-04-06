@@ -29,9 +29,6 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: eas update --auto && eas build --platform android
 
-      - name: Debug EXPO_URL
-        run: echo "Expo URL is ${{ env.EXPO_URL }}"
-
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3
         with:
@@ -39,7 +36,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "🚀 New Expo Deployment Available!"
+          subject: " New Expo Deployment Available!"
           to: ${{ secrets.EMAIL_TO }}
           from: "Your Project <${{ secrets.EMAIL_USER }}>"
-          body: "Your Expo app has been deployed! 🎉\n\nView it here: ${{ env.EXPO_URL }}"
+          body: "Your Expo app has been deployed! \n\nView it here: ${{ env.EXPO_URL }}"
